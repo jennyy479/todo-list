@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-
-const todoSchema = new Schema({
+const userSchema = new Schema({
   name: {
     type: String,
     require: true,
@@ -16,10 +15,8 @@ const todoSchema = new Schema({
   },
   createAt: {
     type: Date,
-    default: Date.now,
-  },
+    default: Date.now
+  }
 })
-
-
 
 module.exports = mongoose.model('User', userSchema)
